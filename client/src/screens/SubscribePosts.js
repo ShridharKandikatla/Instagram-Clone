@@ -1,3 +1,10 @@
+/**
+ *
+ * @author Anass Ferrak aka " TheLordA " <ferrak.anass@gmail.com>
+ * GitHub repo: https://github.com/TheLordA/Instagram-Clone
+ *
+ */
+
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -122,7 +129,7 @@ const SubscribePost = () => {
 		axios.get(SUB_POST_URL, config).then((res) => {
 			setData(res.data.posts);
 		});
-	}, [config]);
+	}, []);
 
 	const likePost = (id) => {
 		axios.put(`http://localhost:5000/like`, { postId: id }, config)

@@ -1,3 +1,10 @@
+/**
+ *
+ * @author Anass Ferrak aka " TheLordA " <ferrak.anass@gmail.com>
+ * GitHub repo: https://github.com/TheLordA/Instagram-Clone
+ *
+ */
+
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -113,7 +120,7 @@ const ProfilePage = () => {
 		axios.get(MY_BOOKMARKS_URL, config).then((res) => {
 			setBookmarks(res.data.bookmark);
 		});
-	}, [config]);
+	}, []);
 
 	//Toggle the EditProfile Button to show the Dialog
 	const [openEdit, setOpenEdit] = useState(false);

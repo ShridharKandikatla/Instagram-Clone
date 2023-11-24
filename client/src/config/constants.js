@@ -1,4 +1,11 @@
 /**
+ *
+ * @author Anass Ferrak aka " TheLordA " <an.ferrak@gmail.com>
+ * GitHub repo: https://github.com/TheLordA/Instagram-Web-App-MERN-Stack-Clone
+ *
+ */
+
+/**
  *  This File will Contains all Constants Used in the whole
  *  Client Code In order to make it more Cleaner
  */
@@ -6,11 +13,11 @@
 // This is the config used in order to send
 // our token with Axios requests
 export const config = (jwt) => {
-   return {
-      headers: {
-         Authorization: "Bearer " + jwt,
-      },
-   };
+	return {
+		headers: {
+			Authorization: "Bearer " + jwt,
+		},
+	};
 };
 
 /**
