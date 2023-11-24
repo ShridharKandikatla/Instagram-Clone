@@ -13,11 +13,11 @@
 // This is the config used in order to send
 // our token with Axios requests
 export const config = (jwt) => {
-	return {
-		headers: {
-			Authorization: "Bearer " + jwt,
-		},
-	};
+  return {
+    headers: {
+      Authorization: 'Bearer ' + jwt,
+    },
+  };
 };
 
 /**
@@ -25,26 +25,26 @@ export const config = (jwt) => {
  */
 
 // CreatePost Screen
-export const CREATE_POST_URL = `http://localhost:5000/createpost`;
+export const CREATE_POST_URL = `https://instagram-clone-qrc9.onrender.com/createpost`;
 
 // Home Screen
-export const ALL_POST_URL = `http://localhost:5000/allpost`;
+export const ALL_POST_URL = `https://instagram-clone-qrc9.onrender.com/allpost`;
 
 // Login Screen
-export const LOGIN_URL = `http://localhost:5000/signin`;
+export const LOGIN_URL = `https://instagram-clone-qrc9.onrender.com/signin`;
 
 // NewPassword Screen
-export const NEW_PWD_URL = `http://localhost:5000/new-pwd`;
+export const NEW_PWD_URL = `https://instagram-clone-qrc9.onrender.com/new-pwd`;
 
 // Profile Screen
-export const MY_POST_URL = `http://localhost:5000/mypost`;
-export const MY_BOOKMARKS_URL = `http://localhost:5000/bookmarks`;
+export const MY_POST_URL = `https://instagram-clone-qrc9.onrender.com/mypost`;
+export const MY_BOOKMARKS_URL = `https://instagram-clone-qrc9.onrender.com/bookmarks`;
 
 // ResetPassword Screen
-export const RESET_PWD_URL = `http://localhost:5000/reset-pwd`;
+export const RESET_PWD_URL = `https://instagram-clone-qrc9.onrender.com/reset-pwd`;
 
 // SignUp Screen
-export const SIGNUP_URL = `http://localhost:5000/signup`;
+export const SIGNUP_URL = `https://instagram-clone-qrc9.onrender.com/signup`;
 
 // SubscribePosts Screen
-export const SUB_POST_URL = `http://localhost:5000/subspost`;
+export const SUB_POST_URL = `https://instagram-clone-qrc9.onrender.com/subspost`;
