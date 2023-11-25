@@ -25,12 +25,7 @@ app.use(helmet());
 app.use(morgan('dev'));
 
 // Set up cors to allow us to accept requests from our client
-app.use(
-  cors({
-    origin: 'http://localhost:10000', // <-- location of the react app were connecting to
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // Parsers
 app.use(express.json({ limit: '50mb' }));
