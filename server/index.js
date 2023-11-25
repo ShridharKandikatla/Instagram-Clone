@@ -27,7 +27,7 @@ app.use(morgan('dev'));
 // Set up cors to allow us to accept requests from our client
 app.use(
   cors({
-    origin: 'https://instagram-clone-uckl.onrender.com/', // <-- location of the react app were connecting to
+    origin: 'http://localhost:10000', // <-- location of the react app were connecting to
     credentials: true,
   })
 );
