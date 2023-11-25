@@ -1,13 +1,13 @@
-const express = require("express");
-const morgan = require("morgan");
-const cors = require("cors");
-const compression = require("compression");
-const helmet = require("helmet");
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const compression = require('compression');
+const helmet = require('helmet');
 
-const connectDB = require("./config/db.config");
+const connectDB = require('./config/db.config');
 
 // Gives us access to variables set in the .env file via `process.env.VARIABLE_NAME` syntax
-require("dotenv").config();
+require('dotenv').config();
 
 // Connection to DB
 connectDB();
@@ -22,26 +22,26 @@ app.use(compression()); //Compress all routes
 app.use(helmet());
 
 // use Morgan dep in dev mode
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 
 // Set up cors to allow us to accept requests from our client
 app.use(
-   cors({
-      origin: "http://localhost:3000", // <-- location of the react app were connecting to
-      credentials: true,
-   })
+  cors({
+    origin: 'https://instagram-clone-uckl.onrender.com/', // <-- location of the react app were connecting to
+    credentials: true,
+  })
 );
 
 // Parsers
-app.use(express.json({ limit: "50mb" }));
+app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 /**
  * -------------- ROUTES ----------------
  */
-require("./routes/auth.route")(app);
-require("./routes/post.route")(app);
-require("./routes/user.route")(app);
+require('./routes/auth.route')(app);
+require('./routes/post.route')(app);
+require('./routes/user.route')(app);
 
 /**
  * -------------- SERVER ----------------
@@ -51,10 +51,10 @@ require("./routes/user.route")(app);
 const PORT = process.env.PORT || 3001;
 
 // Disabling Powered by tag
-app.disable("x-powered-by");
+app.disable('x-powered-by');
 
 app.listen(PORT, () => {
-   console.log(
-      `Server is running in ${process.env.NODE_ENV} mode, under port ${PORT}.`
-   );
+  console.log(
+    `Server is running in ${process.env.NODE_ENV} mode, under port ${PORT}.`
+  );
 });
